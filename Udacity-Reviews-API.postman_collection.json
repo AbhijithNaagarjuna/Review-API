@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "0605d2a5-be5b-4294-beed-f5c9e532b1f3",
+		"name": "Udacity - Reviews API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"prodName\": \"iPhone 11\",\n\t\"prodDescription\": \"A new dual-camera system captures more of what you see and love.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "createReviewForProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"reviewTitle\": \"The best $700 iPhone Apple has ever made\",\n\t\"reviewText\": \"Even faster speed, improved battery life.\",\n\t\"recommended\": true\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/reviews/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reviews",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listReviewsForProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reviews/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reviews",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "createCommentForReview",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"commentTitle\": \"Awesome Phone\",\n\t\"commentText\": \"Coming from the iPhone X.  The XS Max is much faster!\"\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/comments/reviews/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comments",
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listCommentsForReview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comments/reviews/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comments",
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
